@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+form {
+    margin: 20px auto;
+    width: 80%;
+}
+label {
+    display: block;
+    margin: 10px 0;
+}
+input, select {
+    width: 100%;
+}
+input[type="radio"] {
+    width: auto;
+}
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.radio-group label {
+    width: 33%;
+}
+.signature {
+    text-align: right;
+    font-style: italic;
+}
