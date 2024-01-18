@@ -1,28 +1,92 @@
-h1 {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; 
+    color: #333; 
+    margin: 0;
+}
+
+header {
+    background-color: #800000; 
+    color: #ffd700; 
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #800000; 
+    padding: 10px;
     text-align: center;
 }
-form {
-    margin: 20px auto;
+
+nav a {
+    color: #ffd700; 
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #800000; 
+}
+
+.container {
     width: 80%;
+    margin: 20px auto;
 }
-label {
-    display: block;
-    margin: 10px 0;
-}
-input, select {
+
+form {
     width: 100%;
+    max-width: 800px; 
+    margin: 20px auto;
+    background-color: #fff; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-input[type="radio"] {
-    width: auto;
+
+#form3 label,
+#form3 input {
+    display: inline-block;
+    width: 48%; 
+    margin-bottom: 10px;
 }
+
 .radio-group {
     display: flex;
     flex-wrap: wrap;
 }
+
 .radio-group label {
     width: 33%;
+    margin-bottom: 10px;
 }
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #800000; 
+    color: #ffd700; 
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: #5a0000; 
+    border-radius: 30px;
+}
+
 .signature {
     text-align: right;
     font-style: italic;
+    color: #555;
 }
