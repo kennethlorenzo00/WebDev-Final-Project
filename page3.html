@@ -2,12 +2,13 @@
 <html>
     <head>
         <title>Application for New / Replacement of ID</title>
-        <link rel="stylesheet" type="text/css" href="style.css" 
-        <script src="script.js"></script>    
+        <link rel="stylesheet" type="text/css" href="style.css" >
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <h1>ID INFORMATION</h1>
-        <form id="form2"
+        <form id="form2" method="POST" action="https://script.google.com/macros/s/AKfycbwHmZSUo75gE9Yw5p_exW3j7paxfbBjwtAMsT13bV54yU6FdfRK0m4qmS3ns_1oR63W/exec" >
             <label for="student-number">Student Number:</label>
             <input type="text" id="student-number" name="student-number" required>
             <label for="first-name">First Name:</label>
@@ -25,7 +26,23 @@
             <label for="date-of-birth">Date of Birth:</label>
             <input type="date" id="date-of-birth" name="date-of-birth" required>
             <label for="college">College:</label>
-            <input type="text" id="college" name="college" required>
+            <select id="college" name="college" required>
+                <option value=""></option>
+                <option value="College of Accountancy and Finance (CAF)">College of Accountancy and Finance (CAF)</option>
+                <option value="College of Architecture, Design and the Built Environment (CADBE)">College of Architecture, Design and the Built Environment (CADBE)</option>
+                <option value="College of Arts and Letters (CAL)">College of Arts and Letters (CAL)</option>
+                <option value="College of Business Administration (CBA)">College of Business Administration (CBA)</option>
+                <option value="College of Communication (COC)">College of Communication (COC)</option>
+                <option value="College of Computer and Information Sciences (CCIS)">College of Computer and Information Sciences (CCIS)</option>
+                <option value="College of Education (COED)">College of Education (COED)</option>
+                <option value="College of Engineering (CE)">College of Engineering (CE)</option>
+                <option value="College of Human Kinetics (CHK)">College of Human Kinetics (CHK)</option>
+                <option value="College of Law (CL)">College of Law (CL)</option>
+                <option value="College of Science (CS)">College of Science (CS)</option>
+                <option value="College of Political Science and Public Administration (CPSPA)">College of Political Science and Public Administration (CPSPA)</option>
+                <option value="College of Tourism, Hospitality and Transportation Management (CTHTM)">College of Tourism, Hospitality and Transportation Management (CTHTM)</option>
+                <option value="College of Social Sciences and Development (CSSD)">College of Social Sciences and Development (CSSD)</option>
+            </select>
             <label for="course">Course, Yr. & Section:</label>
             <input type="text" id="course" name="course" required>
             <label for="home-address">Home Address:</label>
@@ -41,7 +58,9 @@
             <label for="emergency-address">Address:</label>
             <input type="text" id="emergency-address" name="emergency-address" required>
 
-            <button type="button" onclick="location.href='page2.html'">BACK</button>
+            <button type="button" onclick="confirmAndGoBack()">BACK</button>
+            <button type="button" onclick="submitForm()">SUBMIT</button>
         </form>
+        
     </body>
 </html>    
