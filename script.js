@@ -1,3 +1,9 @@
+function confirmAndGoBack() {
+    var confirmation = confirm("Are you sure?");
+    if (confirmation){
+        window.location.href = 'page2.html';
+    }
+}
 function checkRadioAndProceed() {
     var radios = document.getElementsByName('reason');
     for (var i = 0; i < radios.length; i++) {
