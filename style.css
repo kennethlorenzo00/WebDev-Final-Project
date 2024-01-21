@@ -224,3 +224,11 @@ button:hover {
     font-style: italic;
     color: #555;
 }
+
+#gender {
+    width: 49%;
+}
+
+#college {
+    width: 49%; /* Adjust the width to your preference */
+}

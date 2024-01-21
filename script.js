@@ -17,7 +17,7 @@ function checkRadioAndProceed() {
 }
 
 function submitForm() {
-    var form = document.getElementById("form2");
+    var form = document.getElementById("form3");
 
     var selectedReason = localStorage.getItem('selectedReason');
 
@@ -35,7 +35,8 @@ function submitForm() {
         var confirmation = confirm("Are you sure you want to submit the form?");
         if (confirmation) {
             form.submit();
-            alert('Form is submitted successfully!');
+            var message = 'Form is submitted successfully! Click OK to return to Home Page.'
+            alert(message);
             window.location.href = "index.html";
         }
     } else {
