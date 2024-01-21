@@ -35,6 +35,8 @@ function submitForm() {
         var confirmation = confirm("Are you sure you want to submit the form?");
         if (confirmation) {
             form.submit();
+            alert('Form is submitted successfully!');
+            window.location.href = "index.html";
         }
     } else {
         alert('Please fill out all fields before submitting.');
