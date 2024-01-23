@@ -1,56 +1,178 @@
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-h1 {
+html {
+    scroll-behavior: smooth;
+}
+
+header {
     background-color: #800000;
     color: #ffd700;
     padding: 20px;
-    font-size: 30px;
-    margin: 0;
+    position: relative;
     text-align: center; 
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+.header-content {
+    margin-top: 20px; 
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+h1, h2 {
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.main-nav {
+    margin-top: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav li {
+    margin-right: 15px;
 }
 
 .header {
     position: relative;
 }
 
-h2 {
-    margin: 15px;
-    padding: 15px;
-    font-size: 21px; 
+.menu-icon {
+    display: none; 
+    font-size: 24px; 
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.main-nav {
+    margin-top: 20px; 
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav li {
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-nav {
+        display: none; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+}
+
+.background {
+    background-image: url('pupbg.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding: 20px; 
+    text-align: center; 
+    color: #1f0101;
+}
+
+.background h3 {
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+
+.background h2 {
+    background-color: #fff; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px;
+    color: #1f0101;
+    font-size: 18px; 
+}
+
+.background p {
+    color: #fdfdfd;
+    font-size: 18px; 
+    margin-top: 20px; 
+    margin-bottom: 0; 
+}
+
+.content-container {
+    display: inline-block; 
+    background-color: #e9e9e9;
+    padding: 20px; 
+    border-radius: 10px; 
+}
+
+.content-container h2 {
+    color: #ff0000; 
+    background-color: #e9e9e9;
+    font-size: 30px; 
+}
+
+.content-container h4 {
+    color: #1f0101;
+    font-size: 15px; 
+    margin-bottom: 0px; 
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: #800000;
+    padding: 10px;
     text-align: center;
 }
 
-form {
-    width: 100%;
-    max-width: 800px;
+nav a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
     margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-#form3 label,
-#form3 input {
-    display: inline-block;
-    width: 48%;
-    margin-bottom: 10px;
-}
-
-.radio-group {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.radio-group label {
-    width: 33%;
-    margin-bottom: 10px;
-}
-
-input[type="radio"] {
-    margin-right: 5px;
+    min-height: 100vh;
 }
 
 button {
@@ -63,18 +185,10 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
     border-radius: 25px;
-    position: absolute;
-    bottom: 100px;
-    right: 270px;
 }
 
-button:hover {
-    background-color: #5a0000;
-    border-radius: 30px;
-}
-
-.signature {
-    text-align: right;
-    font-style: italic;
-    color: #555;
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
