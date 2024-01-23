@@ -241,3 +241,50 @@ button:hover {
     justify-content: center;
     margin-top: 20px;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #333; /* Dark background color */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Adjust the width as needed */
+    border-radius: 10px; /* Rounded corners */
+    color: #fff; /* Text color */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Error message container styles */
+.error-message-container {
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #555; /* Dark background color */
+    color: #fff; /* Text color */
+}
+
+.error-message-container p {
+    margin: 5px 0; /* Add margin between error messages */
+}

@@ -29,8 +29,8 @@ function submitForm() {
 
     var isStudentIDValid = /^\d{5}$/.test(document.getElementById("student-number").value.trim());
     var isEmailValid = /\b[A-Za-z0-9._%+-]+@gmail\.com\b/.test(document.getElementById("email").value.trim());
-    var isPhoneNumberValid = /^\d{10}$/.test(document.getElementById("phone").value.trim());
-    var isEmergencyContactValid = /^\d{10}$/.test(document.getElementById("emergency-phone").value.trim());
+    var isPhoneNumberValid = /^\d{11}$/.test(document.getElementById("phone").value.trim());
+    var isEmergencyContactValid = /^\d{11}$/.test(document.getElementById("emergency-phone").value.trim());
 
     var areAllFieldsFilled = Array.from(form.elements).every(function (element) {
         if (element.tagName.toLowerCase() === 'select') {
@@ -50,28 +50,43 @@ function submitForm() {
             window.location.href = "index.html";
         }
     } else {
-        var errorMessage = 'Please correct the following errors before submitting:\n';
+        var errorMessage = 'Please correct the following errors before submitting: <br><br>';
 
         if (!areAllFieldsFilled) {
-            errorMessage += '- All required fields must be filled out.\n';
+            errorMessage += '- All required fields must be filled out. <br>';
         }
 
         if (!isStudentIDValid) {
-            errorMessage += '- Student ID should be a 5-digit number.\n';
+            errorMessage += '- Student ID should be a 5-digit number. <br>';
         }
 
         if (!isEmailValid) {
-            errorMessage += '- Email address should end with "@gmail.com".\n';
+            errorMessage += '- Email address should be valid. <br>';
         }
 
         if (!isPhoneNumberValid) {
-            errorMessage += '- Phone number should be a 10-digit number.\n';
+            errorMessage += '- Phone number should be a 11-digit number. <br>';
         }
 
         if (!isEmergencyContactValid) {
-            errorMessage += '- Emergency contact number should be a 10-digit number.\n';
+            errorMessage += '- Emergency contact number should be a 11-digit number. <br>';
         }
 
-        alert(errorMessage);
+        document.getElementById("error-message-container").innerHTML = errorMessage;
+        openErrorModal();
     }
 }
+
+function openErrorModal() {
+    var modal = document.getElementById("error-modal");
+    modal.style.display = "block";
+}
+
+function closeErrorModal() {
+    var modal = document.getElementById("error-modal");
+    modal.style.display = "none";
+}
+
+
+
+
