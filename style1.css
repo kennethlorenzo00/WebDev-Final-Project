@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #800000;
+    color: #ffd700;
+    padding: 20px;
+    font-size: 30px;
+    margin: 0;
+    text-align: center; 
+}
+
+.header {
+    position: relative;
+}
+
+h2 {
+    margin: 15px;
+    padding: 15px;
+    font-size: 21px; 
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#form3 label,
+#form3 input {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    width: 33%;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #800000;
+    color: #ffd700;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 100px;
+    right: 270px;
+}
+
+button:hover {
+    background-color: #5a0000;
+    border-radius: 30px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #555;
+}

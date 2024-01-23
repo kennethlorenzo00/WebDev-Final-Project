@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application for New / Replacement of ID</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style3.css">
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="script.js"></script>
 </head>
@@ -16,10 +16,12 @@
         OFFICE OF THE STUDENT SERVICES</h1>
 
         <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
-        <h1>ID INFORMATION</h1>
+        
+        <div class="content-container">
+        <h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
+        </div>
         <form id="form3" method="POST" action="https://script.google.com/macros/s/AKfycbwHmZSUo75gE9Yw5p_exW3j7paxfbBjwtAMsT13bV54yU6FdfRK0m4qmS3ns_1oR63W/exec" target="iframe">
-            <h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
-
+            <h3>ID INFORMATION</h3>
             <div class="form-group">
                 <label for="student-number">Student Number:</label>
                 <input type="text" id="student-number" name="student-number" required>
@@ -86,7 +88,7 @@
 
             <div class="form-group">
                 <label for="phone">Phone/Mobile No.:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone" min="1" maxlength="1" required>
             </div>
 
             <div class="form-group">
@@ -110,10 +112,12 @@
             </div>
 
             <div class="form-group">
-                <button type="button" onclick="confirmAndGoBack()">BACK</button>
-                <button type="submit" onclick="submitForm()">SUBMIT</button>
+                <button type="button" onclick="confirmAndGoBack()" class="back-button">BACK</button>
+            <div class="form-group">
+                <button type="submit" onclick="submitForm()" class="submit-button">SUBMIT</button>
             </div>
         </form>
+  
         <div id="error-modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeErrorModal()">&times;</span>

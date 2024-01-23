@@ -1,0 +1,146 @@
+body {
+    margin: 0px;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #800000;
+    color: #ffd700;
+    padding: 20px;
+    font-size: 30px;
+    margin: 0;
+    text-align: center; 
+}
+
+.header {
+    position: relative;
+}
+
+
+h2 {
+    background-color: #9dd7f1;
+    color: #000000;
+    padding: 20px;
+    font-size: 30px;
+    margin: 0;
+    text-align: center; 
+}
+
+h3 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.content-container h2 {
+    color: #000000; 
+    background-color: #e9e9e9;
+    font-size: 25px; 
+}
+
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#form3 label,
+#form3 input {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+#gender {
+    width: 49%;
+}
+
+#college {
+    width: 49%;
+}
+
+button {
+    background-color: #800000;
+    color: #ffd700;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    border-radius: 25px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+form {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.back-button {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+}
+
+.submit-button {
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error-message-container {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #555;
+    color: #fff;
+}
+
+.error-message-container p {
+    margin: 5px 0;
+}
