@@ -1,0 +1,42 @@
+var SPREADSHEET_ID = '1FitkpL68x97ygOWfsdsnVfTywOa21w2AUz6Uwl9uVWU';
+var SHEET_NAME = 'Sheet1';
+
+function doPost(e) {
+    try {
+
+        if (!e || !e.parameter) {
+            throw new Error('Invalid request parameters.');
+        }
+
+        var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
+
+        var formData = e.parameter;
+
+        var data = [
+            formData['student-number'],
+            formData['first-name'],
+            formData['middle-name'],
+            formData['last-name'],
+            formData['gender'],
+            formData['date-of-birth'],
+            formData['college'],
+            formData['course'],
+            formData['home-address'],
+            formData['phone'],
+            formData['email'],
+            formData['emergency-name'],
+            formData['emergency-phone'],
+            formData['emergency-address'],
+            formData['reason']
+        ];
+
+        sheet.appendRow(data);
+
+
+    } catch (error) {
+  
+        console.error('Error: ' + error.toString());
+
+        return ContentService.createTextOutput('Error submitting the form: ' + error.toString());
+    }
+}
