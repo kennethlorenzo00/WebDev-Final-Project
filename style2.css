@@ -1,7 +1,10 @@
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 h1 {
     background-color: #800000;
@@ -10,6 +13,7 @@ h1 {
     font-size: 30px;
     margin: 0;
     text-align: center; 
+    font-family: 'Times New Roman';
 }
 
 .header {
@@ -54,27 +58,32 @@ input[type="radio"] {
 }
 
 button {
-    background-color: #800000;
+    background: linear-gradient(to right, #800000 50%, #ffd700 50%);
     color: #ffd700;
     padding: 15px 30px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
     border-radius: 25px;
+    background-size: 200% 100%;
+    background-position: left bottom;
     position: absolute;
     bottom: 100px;
     right: 270px;
 }
 
 button:hover {
-    background-color: #5a0000;
+    background-position: right bottom;
+    color: #5a0000;
     border-radius: 30px;
+    transform: translateX(10px);
 }
 
-.signature {
-    text-align: right;
-    font-style: italic;
-    color: #555;
+.button-container button:active {
+    transform: scale(0.95);
+    color: #5a0000;
+    background-color: #ffd700;
 }
+
