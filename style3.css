@@ -1,7 +1,10 @@
 body {
-    margin: 0px;
-    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 h1 {
     background-color: #800000;
@@ -10,12 +13,12 @@ h1 {
     font-size: 30px;
     margin: 0;
     text-align: center; 
+    font-family: 'Times New Roman'; 
 }
 
 .header {
     position: relative;
 }
-
 
 h2 {
     background-color: #9dd7f1;
@@ -64,21 +67,36 @@ form {
 }
 
 button {
-    background-color: #800000;
+    background: linear-gradient(to right, #800000 50%, #ffd700 50%);
     color: #ffd700;
     padding: 15px 30px;
     border: none;
     cursor: pointer;
     font-size: 14px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
     border-radius: 25px;
+    background-size: 200% 100%;
+    background-position: left bottom;
 }
 
 #button-container {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
+}
+
+button:hover {
+    background-position: right bottom;
+    color: #5a0000;
+    border-radius: 30px;
+    transform: translateX(10px);
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+    color: #5a0000;
+    background-color: #ffd700;
 }
 
 form {
@@ -98,49 +116,3 @@ form {
     right: 100px;
 }
 
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #333;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 30%;
-    border-radius: 10px;
-    color: #fff;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.error-message-container {
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #555;
-    color: #fff;
-}
-
-.error-message-container p {
-    margin: 5px 0;
-}
